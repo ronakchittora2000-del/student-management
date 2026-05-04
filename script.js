@@ -1,6 +1,8 @@
 let students = [];
 let editIndex = -1;
+let users = [];
 
+// STUDENT FUNCTIONS
 function addStudent() {
 let name = document.getElementById("name").value;
 let course = document.getElementById("course").value;
@@ -28,8 +30,7 @@ return;
 
 students.forEach((s, index) => {
 let li = document.createElement("li");
-li.innerHTML = `       ${s.name} - ${s.course}       <div>        <button onclick="editStudent(${index})">Edit</button> <button class="delete-btn" onclick="deleteStudent(${index})">Delete</button>
-
+li.innerHTML = `       ${s.name} - ${s.course}       <div>         <button onclick="editStudent(${index})">Edit</button>         <button class="delete-btn" onclick="deleteStudent(${index})">Delete</button>       </div>
     `;
 list.appendChild(li);
 });
@@ -57,3 +58,41 @@ editIndex = -1;
 displayStudents();
 }
 
+// LOGIN FUNCTIONS
+function signup() {
+let name = document.getElementById("signupName").value;
+let email = document.getElementById("signupEmail").value;
+let password = document.getElementById("signupPassword").value;
+
+if (name === "" || email === "" || password === "") {
+alert("Fill all fields");
+return;
+}
+
+users.push({ name, email, password });
+alert("Signup Successful");
+}
+
+function login() {
+let email = document.getElementById("loginEmail").value;
+let password = document.getElementById("loginPassword").value;
+
+let user = users.find(u => u.email === email && u.password === password);
+
+if (user) {
+alert("Login Success");
+} else {
+alert("Invalid Credentials");
+}
+}
+
+// TOGGLE FUNCTIONS
+function showStudent() {
+document.getElementById("studentSection").style.display = "block";
+document.getElementById("loginSection").style.display = "none";
+}
+
+function showLogin() {
+document.getElementById("studentSection").style.display = "none";
+document.getElementById("loginSection").style.display = "block";
+}
