@@ -2,24 +2,51 @@
 
 <html>
 <head>
-  <title>Student Management</title>
+  <title>Student + Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-  <h2>Student Form</h2>
+  <div style="text-align:center;">
+    <button onclick="showStudent()">Student Page</button>
+    <button onclick="showLogin()">Login Page</button>
+  </div>
 
-  <div class="form-group">
+  <!-- STUDENT SECTION -->
+
+  <div id="studentSection">
+    <h2>Student Form</h2>
     <input type="text" id="name" placeholder="Enter Name">
     <input type="text" id="course" placeholder="Enter Course">
     <button onclick="addStudent()">Add</button>
     <button onclick="updateStudent()">Update</button>
+
+```
+<h3>Student List</h3>
+<ul id="list"></ul>
+```
+
   </div>
 
-  <h3>Student List</h3>
-  <ul id="list"></ul>
+  <!-- LOGIN SECTION -->
+
+  <div id="loginSection" style="display:none;">
+    <h2>Signup</h2>
+    <input type="text" id="signupName" placeholder="Name">
+    <input type="email" id="signupEmail" placeholder="Email">
+    <input type="password" id="signupPassword" placeholder="Password">
+    <button onclick="signup()">Signup</button>
+
+```
+<h2>Login</h2>
+<input type="email" id="loginEmail" placeholder="Email">
+<input type="password" id="loginPassword" placeholder="Password">
+<button onclick="login()">Login</button>
+```
+
+  </div>
 
 </div>
 
