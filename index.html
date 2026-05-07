@@ -2,58 +2,51 @@
 
 <html>
 <head>
-  <title>Student Management</title>
+  <title>Student Management System</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
+<!-- LOGIN PAGE -->
 
-  <div class="top-buttons">
-    <button onclick="showLogin()">Login</button>
-    <button onclick="showStudent()">Students</button>
-  </div>
+<div class="container" id="loginPage">
 
-  <!-- LOGIN SECTION -->
+  <h2>Welcome Back</h2>
 
-  <div id="loginSection">
+<input type="email" id="email"
+placeholder="Enter Email">
 
-```
-<h2>Welcome Back</h2>
+<input type="password" id="password"
+placeholder="Enter Password">
 
-<input type="text" id="signupName" placeholder="Full Name">
-<input type="email" id="signupEmail" placeholder="Email">
-<input type="password" id="signupPassword" placeholder="Password">
+  <button onclick="login()">
+    Login
+  </button>
 
-<button class="main-btn" onclick="signup()">Signup</button>
+</div>
 
-<hr>
+<!-- STUDENT PAGE -->
 
-<input type="email" id="loginEmail" placeholder="Login Email">
-<input type="password" id="loginPassword" placeholder="Login Password">
+<div class="container" id="studentPage"
+style="display:none;">
 
-<button class="main-btn" onclick="login()">Login</button>
-```
+  <h2>Student Management</h2>
 
-  </div>
+<input type="text" id="name"
+placeholder="Student Name">
 
-  <!-- STUDENT SECTION -->
+<input type="text" id="course"
+placeholder="Course Name">
 
-  <div id="studentSection" style="display:none;">
+  <button onclick="addStudent()">
+    Add Student
+  </button>
 
-```
-<h2>Student Management</h2>
+<button class="update-btn"
+onclick="updateStudent()">
+Update Student </button>
 
-<input type="text" id="name" placeholder="Student Name">
-<input type="text" id="course" placeholder="Course Name">
-
-<button class="main-btn" onclick="addStudent()">Add Student</button>
-<button class="update-btn" onclick="updateStudent()">Update</button>
-
-<ul id="list"></ul>
-```
-
-  </div>
+  <ul id="list"></ul>
 
 </div>
 
@@ -61,4 +54,5 @@
 
 </body>
 </html>
+
 
