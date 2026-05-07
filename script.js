@@ -1,3 +1,5 @@
+alert("JS Working");
+
 let students = [];
 let editIndex = -1;
 
