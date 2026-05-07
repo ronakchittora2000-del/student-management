@@ -10,9 +10,6 @@ document.getElementById("email").value.trim();
 let password =
 document.getElementById("password").value.trim();
 
-console.log(email);
-console.log(password);
-
 if (
 email === "[parfullchittora2000@gmail.com](mailto:parfullchittora2000@gmail.com)" &&
 password === "1234"
@@ -34,6 +31,7 @@ alert("Invalid Email or Password");
 
 }
 }
+
 
 
 // ADD STUDENT
