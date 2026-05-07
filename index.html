@@ -2,48 +2,55 @@
 
 <html>
 <head>
-  <title>Student + Login</title>
+  <title>Student Management</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-  <div style="text-align:center;">
-    <button onclick="showStudent()">Student Page</button>
-    <button onclick="showLogin()">Login Page</button>
-  </div>
-
-  <!-- STUDENT SECTION -->
-
-  <div id="studentSection">
-    <h2>Student Form</h2>
-    <input type="text" id="name" placeholder="Enter Name">
-    <input type="text" id="course" placeholder="Enter Course">
-    <button onclick="addStudent()">Add</button>
-    <button onclick="updateStudent()">Update</button>
-
-```
-<h3>Student List</h3>
-<ul id="list"></ul>
-```
-
+  <div class="top-buttons">
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showStudent()">Students</button>
   </div>
 
   <!-- LOGIN SECTION -->
 
-  <div id="loginSection" style="display:none;">
-    <h2>Signup</h2>
-    <input type="text" id="signupName" placeholder="Name">
-    <input type="email" id="signupEmail" placeholder="Email">
-    <input type="password" id="signupPassword" placeholder="Password">
-    <button onclick="signup()">Signup</button>
+  <div id="loginSection">
 
 ```
-<h2>Login</h2>
-<input type="email" id="loginEmail" placeholder="Email">
-<input type="password" id="loginPassword" placeholder="Password">
-<button onclick="login()">Login</button>
+<h2>Welcome Back</h2>
+
+<input type="text" id="signupName" placeholder="Full Name">
+<input type="email" id="signupEmail" placeholder="Email">
+<input type="password" id="signupPassword" placeholder="Password">
+
+<button class="main-btn" onclick="signup()">Signup</button>
+
+<hr>
+
+<input type="email" id="loginEmail" placeholder="Login Email">
+<input type="password" id="loginPassword" placeholder="Login Password">
+
+<button class="main-btn" onclick="login()">Login</button>
+```
+
+  </div>
+
+  <!-- STUDENT SECTION -->
+
+  <div id="studentSection" style="display:none;">
+
+```
+<h2>Student Management</h2>
+
+<input type="text" id="name" placeholder="Student Name">
+<input type="text" id="course" placeholder="Course Name">
+
+<button class="main-btn" onclick="addStudent()">Add Student</button>
+<button class="update-btn" onclick="updateStudent()">Update</button>
+
+<ul id="list"></ul>
 ```
 
   </div>
@@ -54,3 +61,4 @@
 
 </body>
 </html>
+
