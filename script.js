@@ -5,27 +5,36 @@ let editIndex = -1;
 function login() {
 
 let email =
-document.getElementById("email").value;
+document.getElementById("email").value.trim();
 
 let password =
-document.getElementById("password").value;
+document.getElementById("password").value.trim();
 
-if(email === "[parfullchittora2000@gmail.com](mailto:parfullchittora2000@gmail.com)"
-&& password === "1234") {
+console.log(email);
+console.log(password);
 
+if (
+email === "[parfullchittora2000@gmail.com](mailto:parfullchittora2000@gmail.com)" &&
+password === "1234"
+) {
+
+```
 document.getElementById("loginPage")
-.style.display = "none";
+  .style.display = "none";
 
 document.getElementById("studentPage")
-.style.display = "block";
+  .style.display = "block";
+```
 
 } else {
 
+```
 alert("Invalid Email or Password");
+```
 
 }
-
 }
+
 
 // ADD STUDENT
 function addStudent() {
