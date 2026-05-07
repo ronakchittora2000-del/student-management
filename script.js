@@ -17,7 +17,6 @@ email === "parfullchittora2000@gmail.com" &&
 password === "1234"
 ) {
 
-```
 alert("Login Success");
 
 document.getElementById("loginPage")
@@ -25,13 +24,10 @@ document.getElementById("loginPage")
 
 document.getElementById("studentPage")
   .style.display = "block";
-```
 
 } else {
 
-```
 alert("Invalid Email or Password");
-```
 
 }
 }
@@ -47,10 +43,8 @@ document.getElementById("course").value;
 
 if(name === "" || course === "") {
 
-```
 alert("Fill all fields");
 return;
-```
 
 }
 
@@ -72,7 +66,6 @@ list.innerHTML = "";
 
 students.forEach((s, index) => {
 
-```
 let li =
   document.createElement("li");
 
@@ -92,7 +85,6 @@ li.innerHTML = `
 `;
 
 list.appendChild(li);
-```
 
 });
 }
