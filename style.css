@@ -1,73 +1,103 @@
 body {
 margin: 0;
+padding: 0;
 font-family: Arial, sans-serif;
-background: linear-gradient(135deg, #4facfe, #00f2fe);
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+min-height: 100vh;
+
+background: linear-gradient(
+135deg,
+#4facfe,
+#00f2fe
+);
 }
 
 .container {
-width: 350px;
-margin: 50px auto;
+width: 420px;
+
 background: white;
-padding: 25px;
-border-radius: 15px;
-box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
 
-h2 {
-text-align: center;
-color: #333;
-}
+padding: 35px;
 
-input {
-width: 100%;
-padding: 10px;
-margin: 8px 0;
-border: 1px solid #ccc;
-border-radius: 8px;
-box-sizing: border-box;
-}
+border-radius: 20px;
 
-button {
-cursor: pointer;
-}
+box-shadow:
+0 10px 30px rgba(0,0,0,0.2);
 
-.main-btn {
-width: 100%;
-padding: 10px;
-background: #007bff;
-color: white;
-border: none;
-border-radius: 8px;
-margin-top: 10px;
-}
-
-.main-btn:hover {
-background: #0056b3;
-}
-
-.update-btn {
-width: 100%;
-padding: 10px;
-background: orange;
-color: white;
-border: none;
-border-radius: 8px;
-margin-top: 10px;
+animation: fade 0.5s ease;
 }
 
 .top-buttons {
 display: flex;
 justify-content: space-between;
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 
 .top-buttons button {
 width: 48%;
-padding: 10px;
+background: #2f2f2f;
+}
+
+h2 {
+text-align: center;
+color: #333;
+
+margin-bottom: 25px;
+
+font-size: 42px;
+}
+
+input {
+width: 100%;
+
+padding: 15px;
+
+margin-bottom: 15px;
+
+border-radius: 12px;
+border: 1px solid #ccc;
+
+font-size: 16px;
+
+box-sizing: border-box;
+}
+
+button {
+width: 100%;
+
+padding: 15px;
+
 border: none;
-border-radius: 8px;
-background: #333;
+border-radius: 12px;
+
+background: #007bff;
 color: white;
+
+font-size: 16px;
+
+cursor: pointer;
+
+transition: 0.3s;
+}
+
+button:hover {
+transform: scale(1.02);
+}
+
+.main-btn {
+margin-bottom: 15px;
+}
+
+.update-btn {
+background: orange;
+}
+
+.delete-btn {
+background: red;
 }
 
 ul {
@@ -77,18 +107,35 @@ padding: 0;
 
 li {
 background: #f4f4f4;
-padding: 10px;
+
 margin-top: 10px;
-border-radius: 8px;
+
+padding: 14px;
+
+border-radius: 10px;
+
 display: flex;
 justify-content: space-between;
+align-items: center;
 }
 
-.delete-btn {
-background: red;
-color: white;
+hr {
+margin: 25px 0;
 border: none;
-padding: 5px 8px;
-border-radius: 5px;
+height: 1px;
+background: #ddd;
 }
+
+@keyframes fade {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
 
