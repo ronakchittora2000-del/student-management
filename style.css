@@ -1,6 +1,7 @@
 body {
 margin: 0;
 padding: 0;
+
 font-family: Arial, sans-serif;
 
 display: flex;
@@ -17,7 +18,7 @@ background: linear-gradient(
 }
 
 .container {
-width: 420px;
+width: 400px;
 
 background: white;
 
@@ -31,24 +32,14 @@ box-shadow:
 animation: fade 0.5s ease;
 }
 
-.top-buttons {
-display: flex;
-justify-content: space-between;
-margin-bottom: 30px;
-}
-
-.top-buttons button {
-width: 48%;
-background: #2f2f2f;
-}
-
 h2 {
 text-align: center;
-color: #333;
 
 margin-bottom: 25px;
 
-font-size: 42px;
+color: #333;
+
+font-size: 36px;
 }
 
 input {
@@ -59,6 +50,7 @@ padding: 15px;
 margin-bottom: 15px;
 
 border-radius: 12px;
+
 border: 1px solid #ccc;
 
 font-size: 16px;
@@ -71,10 +63,14 @@ width: 100%;
 
 padding: 15px;
 
+margin-top: 10px;
+
 border: none;
+
 border-radius: 12px;
 
 background: #007bff;
+
 color: white;
 
 font-size: 16px;
@@ -86,10 +82,6 @@ transition: 0.3s;
 
 button:hover {
 transform: scale(1.02);
-}
-
-.main-btn {
-margin-bottom: 15px;
 }
 
 .update-btn {
@@ -119,13 +111,6 @@ justify-content: space-between;
 align-items: center;
 }
 
-hr {
-margin: 25px 0;
-border: none;
-height: 1px;
-background: #ddd;
-}
-
 @keyframes fade {
 from {
 opacity: 0;
@@ -137,5 +122,3 @@ opacity: 1;
 transform: translateY(0);
 }
 }
-
-
