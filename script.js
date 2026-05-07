@@ -11,7 +11,7 @@ let password =
 document.getElementById("password").value.trim();
 
 if (
-email === "[parfullchittora2000@gmail.com](mailto:parfullchittora2000@gmail.com)" &&
+email === "[parfullchittora2000@gmail.com]''
 password === "1234"
 ) {
 
