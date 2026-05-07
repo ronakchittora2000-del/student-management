@@ -14,16 +14,17 @@ if(email === "[parfullchittora2000@gmail.com](mailto:parfullchittora2000@gmail.c
 && password === "1234") {
 
 document.getElementById("loginPage")
-  .style.display = "none";
+.style.display = "none";
 
 document.getElementById("studentPage")
-  .style.display = "block";
+.style.display = "block";
 
 } else {
 
 alert("Invalid Email or Password");
 
 }
+
 }
 
 // ADD STUDENT
