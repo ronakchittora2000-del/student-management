@@ -2,38 +2,34 @@ let students = [];
 let editIndex = -1;
 
 // LOGIN FUNCTION
+:::writing{variant="standard" id="59317"}
 function login() {
 
-let email =
-document.getElementById("email").value.trim();
+  let email =
+    document.getElementById("email").value.trim();
 
-let password =
-document.getElementById("password").value.trim();
+  let password =
+    document.getElementById("password").value.trim();
 
-if (
-email === "[parfullchittora2000@gmail.com]''
-password === "1234"
-) {
+  if (
+    email === "parfullchittora2000@gmail.com" &&
+    password === "1234"
+  ) {
 
-```
-document.getElementById("loginPage")
-  .style.display = "none";
+    alert("Login Success");
 
-document.getElementById("studentPage")
-  .style.display = "block";
-```
+    document.getElementById("loginPage")
+      .style.display = "none";
 
-} else {
+    document.getElementById("studentPage")
+      .style.display = "block";
 
-```
-alert("Invalid Email or Password");
-```
+  } else {
 
+    alert("Invalid Email or Password");
+
+  }
 }
-}
-
-
-
 // ADD STUDENT
 function addStudent() {
 
