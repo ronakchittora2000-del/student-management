@@ -1,138 +1,138 @@
 alert("JS Working");
 
-let students = [];
-let editIndex = -1;
+// let students = [];
+// let editIndex = -1;
 
-// LOGIN FUNCTION
-function login() {
+// // LOGIN FUNCTION
+// function login() {
 
-let email =
-document.getElementById("email").value.trim();
+// let email =
+// document.getElementById("email").value.trim();
 
-let password =
-document.getElementById("password").value.trim();
+// let password =
+// document.getElementById("password").value.trim();
 
-if (
-email === "parfullchittora2000@gmail.com" &&
-password === "1234"
-) {
+// if (
+// email === "parfullchittora2000@gmail.com" &&
+// password === "1234"
+// ) {
 
-```
-alert("Login Success");
+// ```
+// alert("Login Success");
 
-document.getElementById("loginPage")
-  .style.display = "none";
+// document.getElementById("loginPage")
+//   .style.display = "none";
 
-document.getElementById("studentPage")
-  .style.display = "block";
-```
+// document.getElementById("studentPage")
+//   .style.display = "block";
+// ```
 
-} else {
+// } else {
 
-```
-alert("Invalid Email or Password");
-```
+// ```
+// alert("Invalid Email or Password");
+// ```
 
-}
-}
+// }
+// }
 
-// ADD STUDENT
-function addStudent() {
+// // ADD STUDENT
+// function addStudent() {
 
-let name =
-document.getElementById("name").value;
+// let name =
+// document.getElementById("name").value;
 
-let course =
-document.getElementById("course").value;
+// let course =
+// document.getElementById("course").value;
 
-if(name === "" || course === "") {
+// if(name === "" || course === "") {
 
-```
-alert("Fill all fields");
-return;
-```
+// ```
+// alert("Fill all fields");
+// return;
+// ```
 
-}
+// }
 
-students.push({name, course});
+// students.push({name, course});
 
-displayStudents();
+// displayStudents();
 
-document.getElementById("name").value = "";
-document.getElementById("course").value = "";
-}
+// document.getElementById("name").value = "";
+// document.getElementById("course").value = "";
+// }
 
-// DISPLAY STUDENTS
-function displayStudents() {
+// // DISPLAY STUDENTS
+// function displayStudents() {
 
-let list =
-document.getElementById("list");
+// let list =
+// document.getElementById("list");
 
-list.innerHTML = "";
+// list.innerHTML = "";
 
-students.forEach((s, index) => {
+// students.forEach((s, index) => {
 
-```
-let li =
-  document.createElement("li");
+// ```
+// let li =
+//   document.createElement("li");
 
-li.innerHTML = `
-  ${s.name} - ${s.course}
+// li.innerHTML = `
+//   ${s.name} - ${s.course}
 
-  <div>
-    <button onclick="editStudent(${index})">
-      Edit
-    </button>
+//   <div>
+//     <button onclick="editStudent(${index})">
+//       Edit
+//     </button>
 
-    <button class="delete-btn"
-    onclick="deleteStudent(${index})">
-      Delete
-    </button>
-  </div>
-`;
+//     <button class="delete-btn"
+//     onclick="deleteStudent(${index})">
+//       Delete
+//     </button>
+//   </div>
+// `;
 
-list.appendChild(li);
-```
+// list.appendChild(li);
+// ```
 
-});
-}
+// });
+// }
 
-// DELETE STUDENT
-function deleteStudent(index) {
+// // DELETE STUDENT
+// function deleteStudent(index) {
 
-students.splice(index, 1);
+// students.splice(index, 1);
 
-displayStudents();
-}
+// displayStudents();
+// }
 
-// EDIT STUDENT
-function editStudent(index) {
+// // EDIT STUDENT
+// function editStudent(index) {
 
-let s = students[index];
+// let s = students[index];
 
-document.getElementById("name").value =
-s.name;
+// document.getElementById("name").value =
+// s.name;
 
-document.getElementById("course").value =
-s.course;
+// document.getElementById("course").value =
+// s.course;
 
-editIndex = index;
-}
+// editIndex = index;
+// }
 
-// UPDATE STUDENT
-function updateStudent() {
+// // UPDATE STUDENT
+// function updateStudent() {
 
-if(editIndex === -1) return;
+// if(editIndex === -1) return;
 
-students[editIndex].name =
-document.getElementById("name").value;
+// students[editIndex].name =
+// document.getElementById("name").value;
 
-students[editIndex].course =
-document.getElementById("course").value;
+// students[editIndex].course =
+// document.getElementById("course").value;
 
-editIndex = -1;
+// editIndex = -1;
 
-displayStudents();
-}
+// displayStudents();
+// }
 
 
