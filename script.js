@@ -2,7 +2,6 @@ let students = [];
 let editIndex = -1;
 
 // LOGIN FUNCTION
-:::writing{variant="standard" id="59317"}
 function login() {
 
   let email =
