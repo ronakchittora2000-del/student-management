@@ -32,7 +32,6 @@ alert("Invalid Email or Password");
 }
 }
 
-// ADD STUDENT
 function addStudent() {
 
 let name =
@@ -44,9 +43,7 @@ document.getElementById("course").value;
 if(name === "" || course === "") {
 
 alert("Fill all fields");
-return;
-
-}
+return;}
 
 students.push({name, course});
 
@@ -56,7 +53,6 @@ document.getElementById("name").value = "";
 document.getElementById("course").value = "";
 }
 
-// DISPLAY STUDENTS
 function displayStudents() {
 
 let list =
@@ -88,8 +84,6 @@ list.appendChild(li);
 
 });
 }
-
-// DELETE STUDENT
 function deleteStudent(index) {
 
 students.splice(index, 1);
@@ -97,7 +91,6 @@ students.splice(index, 1);
 displayStudents();
 }
 
-// EDIT STUDENT
 function editStudent(index) {
 
 let s = students[index];
@@ -111,7 +104,6 @@ s.course;
 editIndex = index;
 }
 
-// UPDATE STUDENT
 function updateStudent() {
 
 if(editIndex === -1) return;
