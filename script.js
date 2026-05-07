@@ -4,31 +4,36 @@ let editIndex = -1;
 // LOGIN FUNCTION
 function login() {
 
-  let email =
-    document.getElementById("email").value.trim();
+let email =
+document.getElementById("email").value.trim();
 
-  let password =
-    document.getElementById("password").value.trim();
+let password =
+document.getElementById("password").value.trim();
 
-  if (
-    email === "parfullchittora2000@gmail.com" &&
-    password === "1234"
-  ) {
+if (
+email === "[parfullchittora2000@gmail.com](mailto:parfullchittora2000@gmail.com)" &&
+password === "1234"
+) {
 
-    alert("Login Success");
+```
+alert("Login Success");
 
-    document.getElementById("loginPage")
-      .style.display = "none";
+document.getElementById("loginPage")
+  .style.display = "none";
 
-    document.getElementById("studentPage")
-      .style.display = "block";
+document.getElementById("studentPage")
+  .style.display = "block";
+```
 
-  } else {
+} else {
 
-    alert("Invalid Email or Password");
+```
+alert("Invalid Email or Password");
+```
 
-  }
 }
+}
+
 // ADD STUDENT
 function addStudent() {
 
@@ -40,8 +45,10 @@ document.getElementById("course").value;
 
 if(name === "" || course === "") {
 
+```
 alert("Fill all fields");
 return;
+```
 
 }
 
@@ -63,6 +70,7 @@ list.innerHTML = "";
 
 students.forEach((s, index) => {
 
+```
 let li =
   document.createElement("li");
 
@@ -82,6 +90,7 @@ li.innerHTML = `
 `;
 
 list.appendChild(li);
+```
 
 });
 }
@@ -123,3 +132,4 @@ editIndex = -1;
 
 displayStudents();
 }
+
