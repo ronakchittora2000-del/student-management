@@ -10,7 +10,7 @@ document.getElementById("email").value;
 let password =
 document.getElementById("password").value;
 
-if(email === "[admin@gmail.com](mailto:admin@gmail.com)"
+if(email === "[parfullchittora2000@gmail.com](mailto:parfullchittora2000@gmail.com)"
 && password === "1234") {
 
 document.getElementById("loginPage")
@@ -37,10 +37,8 @@ document.getElementById("course").value;
 
 if(name === "" || course === "") {
 
-```
 alert("Fill all fields");
 return;
-```
 
 }
 
